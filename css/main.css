@@ -308,7 +308,6 @@ a {
   font-family: 'Fira Sans'; }
 
 .inner_wrapper__port {
-  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: strech;
@@ -318,15 +317,37 @@ a {
 .carouseltittle {
   text-align: center;
   width: 100%;
-  margin: 40px 0 0 0; }
+  padding: 40px 0 0 0;
+  position: relative; }
 
 .item > ul {
   list-style: none; }
 
+.item.item_video {
+  background-color: #4A90E2; }
+
+.item.item_animation {
+  background-color: #4A90E2; }
+
+.item.item_design {
+  background-color: #F5A623; }
+
+.item.item_direction {
+  background-color: #F5A623; }
+
 .owl-carousel {
   color: white;
   display: block;
-  background-color: #4A90E2; }
+  background-color: transparent; }
+
+.owl-carousel.owl-theme.owl-loaded.owl-drag {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
+
+.owl-nav {
+  position: absolute;
+  bottom: 30px; }
 
 .carousel_link {
   text-decoration: none;
@@ -343,13 +364,15 @@ a {
   flex-flow: row wrap;
   align-content: space-around;
   justify-content: center;
-  padding: 2em 5em; }
+  padding: 2em 5em 7em 5em; }
 
 .left_part {
   float: left;
   margin-right: 20px;
-  height: 100%;
   margin-top: 20px; }
+
+.right_part {
+  margin-bottom: 1em; }
 
 .owl-carousel .owl-item img {
   width: 45px; }
@@ -357,10 +380,28 @@ a {
 .carousel_pic {
   width: 45px;
   height: 45px;
-  border-radius: 50px; }
+  border-radius: 50px;
+  object-fit: cover; }
 
 .owl-nav {
   display: block; }
+
+.owl-dots {
+  display: none; }
+
+.outlet {
+  margin-top: 5em;
+  margin-bottom: 5em;
+  height: 60%; }
+
+.outlet_pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center left; }
+
+.btn.btn-default {
+  margin-top: 45px; }
 
 /* Large desktop */
 @media (min-width: 979px) and (max-width: 1200px) {
