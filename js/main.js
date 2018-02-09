@@ -22,7 +22,7 @@ $(document).ready(function(){
 $(window).ready(function() {
   $(".port_nav li a").click(function() {
     var elementClick = $(this).attr("href");
-    var destination = $(elementClick).offset().top;
+    var destination = $('.port_nav').offset().top;
 
     // $('.content').toggleClass('hidden');
     jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 500);
@@ -42,4 +42,29 @@ $(window).ready(function() {
     );
     /* Act on the event */
   });
+});
+
+$(document).ready(function () {
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1) {
+            $('.inner_wrapper_n').addClass('case_hero_s');
+        }
+        else {
+            $('.inner_wrapper_n').toggleClass('case_hero_s');
+        }
+    })
+    });
+
+
+$(document).ready(function () {
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 330) {
+            $('.case_nav').slideDown();
+        }
+        else {
+            $('.case_nav').slideUp();
+        }
+    })
 });

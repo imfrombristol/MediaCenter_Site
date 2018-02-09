@@ -1,11 +1,13 @@
 @import typo
 #portfolio
     font-family: 'Fira Sans'
+.portfolio
+    
 
 .inner_wrapper__port.row
     
-    height: 100%
-    width: 100vw
+    
+    
     
 .nav_wraper
     overflow: scroll
@@ -14,7 +16,6 @@
         display: none
 .tittle_block.nav_tit
     text-align: center
-    padding: 3rem 0
     background-color: $blue
     margin-bottom: 0px
     color: white
@@ -36,7 +37,7 @@
 .one
     display: inline-block
     width: 30vw
-    height: 300px
+    height: 200px
     display: flex
     flex-direction: column
     justify-content: flex-end
@@ -44,16 +45,17 @@
     overflow: hidden
 .one_link
     padding: 0 3rem
-    background-color: rgba(255, 255, 255, .5)
+    background-color: rgba($blue, .5)
     position: absolute   
     z-index: 11 
     transition: 1s ease
     width: 100%
-    color: $black
+    color: #fff
+    padding: 30rem 3rem 0 3rem
     >div
         z-index: 100
     &:hover
-        padding: 30rem 3rem 0 3rem
+        
         transition: .5s ease
         background-color: rgba($yellow, .5)
 .one_img
@@ -99,13 +101,13 @@
 .vosk_t
     word-wrap: break-word
 .outlet
-    height: 100%
+    
     width: 100%
     display: flex
     justify-content: space-between
-    align-items: stretch
+    align-items: center
     flex-direction: row
-    padding: 5em 0
+    padding-top: 4rem
 .outlet_pic
     width: 100%
     height: 100%
@@ -126,16 +128,21 @@
 .out_dis
     display: none
 .outlet_wrap
-    position: relative
+    // position: relative
     width: 100vw
-    height: 100vh
+    
 .outlet_port
-    position: relative
+
     width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
 .outlet_right
     height: 100%
 .outlet_left
     height: 100%
+.tit
+    font-size: 48px
    
 
 
