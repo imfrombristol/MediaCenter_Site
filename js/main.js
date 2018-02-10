@@ -31,14 +31,14 @@ $(window).ready(function() {
 });
 
 $(window).ready(function() {
-  $(".nav li a").click(function() {
+  $("#menu ul li a").click(function() {
     var elementClick = $(this).attr("href");
     var destination = $(elementClick).offset().top;
 
     // $('.content').toggleClass('hidden');
     jQuery("html:not(:animated),body:not(:animated)").animate(
       { scrollTop: destination },
-      1000
+      1300
     );
     /* Act on the event */
   });
@@ -60,6 +60,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     $(window).scroll(function() {
+
         if ($(this).scrollTop() > 330) {
             $('.case_nav').slideDown();
         }
@@ -67,4 +68,45 @@ $(document).ready(function () {
             $('.case_nav').slideUp();
         }
     })
+});
+
+jQuery(document).ready(function( $ ) {
+    $("#menu").mmenu({
+
+    });
+});
+
+var $menu = $("#menu").mmenu({
+    "extensions": [
+        "fx-listitems-slide",
+        "theme-dark",
+        "pagedim-black",
+        "position-right"
+    ],
+    offCanvas: {
+        pageSelector: "#my_menu"
+
+    },
+    onClick : {
+        close          : true,
+        preventDefault : false
+    },
+    scrollBugFix : {
+        fix            : true
+    }
+});
+var $icon = $("#menu_ico");
+var API = $menu.data( "mmenu" );
+$icon.on( "click", function() {
+    API.open();
+});
+API.bind( "open:finish", function() {
+    setTimeout(function() {
+        $icon.addClass( "is-active" );
+    }, 100);
+});
+API.bind( "close:finish", function() {
+    setTimeout(function() {
+        $icon.removeClass( "is-active" );
+    }, 100);
 });

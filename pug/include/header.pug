@@ -1,21 +1,6 @@
-.nav_menu.navbar.navbar-default(role="navigation")
-	.container-fluid
-		.navbar-header
-			button(type="button" data-toggle="collapse" data-target=".navbar-collapse").navbar-toggle
-				span.sr-only Toggle Navigation
-				span.icon-bar
-				span.icon-bar
-				span.icon-bar
-			a.navbar-brand(href="#") 
-		.navbar-collapse.collapse
-			ul.nav.navbar-nav
-				li.menu_item
-					a.menu_link(href="#about") О студии
-				li.menu_item
-					a.menu_link(href="#process") Подход
-				li.menu_item
-					a.menu_link(href="#company") Клиенты
-				li.menu_item
-					a.menu_link(href="#portfolio") Проекты
-				li.menu_item
-					a.menu_link(href="#contacts") Контакты
+.nav_menu
+	a(href="#menu")
+		button.hamburger.hamburger--elastic#menu_ico(type="button")
+			span.hamburger-box
+				span.hamburger-inner
+
