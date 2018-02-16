@@ -1,52 +1,35 @@
+$(window).ready(function () {
+    $(".collapse ul li a").click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
 
-$(document).ready(function(){
-    $(".outlet_wrap").slice(1).hide();
-    $('.port_nav li').eq(0).addClass("active");
-    $('.port_nav li a').click(function(e){
-        e.preventDefault();
-        let aim = $(this).attr("href");
-        $(this)
-          .parent()
-          .addClass("active");
-        $(this)
-          .parent()
-          .siblings()
-          .removeClass("active");
-          $(aim).show();
-          $(aim)
-            .siblings(".outlet_wrap")
-            .hide();
-    })
-})
-
-$(window).ready(function() {
-  $(".port_nav li a").click(function() {
-    var elementClick = $(this).attr("href");
-    var destination = $('.port_nav').offset().top;
-
-    // $('.content').toggleClass('hidden');
-    jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 500);
-    /* Act on the event */
-  });
+        // $('.content').toggleClass('hidden');
+        jQuery("html:not(:animated),body:not(:animated)").animate(
+            {scrollTop: destination},
+            1300
+        );
+        /* Act on the event */
+    });
 });
 
-$(window).ready(function() {
-  $("#menu ul li a").click(function() {
-    var elementClick = $(this).attr("href");
-    var destination = $(elementClick).offset().top;
+$(window).ready(function () {
+    $(".navbar-brand").click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
 
-    // $('.content').toggleClass('hidden');
-    jQuery("html:not(:animated),body:not(:animated)").animate(
-      { scrollTop: destination },
-      1300
-    );
-    /* Act on the event */
-  });
+        // $('.content').toggleClass('hidden');
+        jQuery("html:not(:animated),body:not(:animated)").animate(
+            {scrollTop: destination},
+            300
+        );
+        /* Act on the event */
+    });
 });
+
 
 $(document).ready(function () {
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 1) {
             $('.inner_wrapper_n').addClass('case_hero_s');
         }
@@ -54,12 +37,12 @@ $(document).ready(function () {
             $('.inner_wrapper_n').toggleClass('case_hero_s');
         }
     })
-    });
+});
 
 
 $(document).ready(function () {
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
 
         if ($(this).scrollTop() > 330) {
             $('.case_nav').slideDown();
@@ -70,43 +53,57 @@ $(document).ready(function () {
     })
 });
 
-jQuery(document).ready(function( $ ) {
-    $("#menu").mmenu({
 
+$(document).ready(function () {
+    //initialize swiper when document ready
+    var mySwiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 10,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            }
+        }
+    })
+});
+
+$(document).ready(function () {
+    $('#submit').click(function () {
+        // собираем данные с формы
+        var user_name = $('#user_name').val();
+        var user_email = $('#user_email').val();
+        var text_comment = $('#message').val();
+        // отправляем данные
+        $.ajax({
+            url: "action.php", // куда отправляем
+            type: "post", // метод передачи
+            dataType: "json", // тип передачи данных
+            data: { // что отправляем
+                "user_name": user_name,
+                "user_email": user_email,
+                "text_comment": text_comment
+            },
+            // после получения ответа сервера
+            success: function (data) {
+                $('.messages').html(data.result); // выводим ответ сервера
+            }
+        });
     });
-});
-
-var $menu = $("#menu").mmenu({
-    "extensions": [
-        "fx-listitems-slide",
-        "theme-dark",
-        "pagedim-black",
-        "position-right"
-    ],
-    offCanvas: {
-        pageSelector: "#my_menu"
-
-    },
-    onClick : {
-        close          : true,
-        preventDefault : false
-    },
-    scrollBugFix : {
-        fix            : true
-    }
-});
-var $icon = $("#menu_ico");
-var API = $menu.data( "mmenu" );
-$icon.on( "click", function() {
-    API.open();
-});
-API.bind( "open:finish", function() {
-    setTimeout(function() {
-        $icon.addClass( "is-active" );
-    }, 100);
-});
-API.bind( "close:finish", function() {
-    setTimeout(function() {
-        $icon.removeClass( "is-active" );
-    }, 100);
 });

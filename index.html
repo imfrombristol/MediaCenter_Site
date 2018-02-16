@@ -3,180 +3,141 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Медиацентр </title>
+  <title>Медиацентр</title>
   <link rel="stylesheet" href="css/normalize.css"/>
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="css/main.css"/>
   <link rel="stylesheet" href="css/swiper.min.css"/>
-  <link rel="stylesheet" href="css/jquery.mmenu.all.css"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,400,500,600"/>
+  <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-  <div class="wrapper" id="mymenu">
-    <div class="nav_menu"><a href="#menu">
-        <button class="hamburger hamburger--elastic" id="menu_ico" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></a></div>
-    <section class="hero" id="hero">
-      <div class="inner_wrapper row">
-        <div class="tittle_text">
-          <div class="tittle">Медиацентр — это студия,</div>
-          <div class="tittle_descript">где мы создаем полезные продукты в цифровой среде.</div>
+  <div class="modal fade" id="call" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
-        <div class="tittle_pic_w col-md-10 col-sm-10 col-xs-10"><img class="tittle_pic" src="../img/bg.jpg" alt=""/></div>
-      </div>
-    </section>
-    <section class="about" id="about">
-      <div class="inner_wrapper about_wrapper">
-        <div class="about_descript">
-          <div class="row">
-            <div class="col-md-6 col-sm-10 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
-              <div class="tittle_block">Эффективно решаем задачи</div>
-              <div class="descript_block">Мы используем современное и мощное оборудование для создания наших продуктов. В рабочем арсенале есть все, что необходимо для реализации задуманного. Команда состоит из операторов, монтажеров, дизайнеров, мультипликаторов, художников и специалистов по работе с 3D.</div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label class="control-label" for="user_name">Ваше Имя</label>
+              <input class="form-control" id="user_name" type="text"/>
             </div>
-          </div>
+            <div class="form-group">
+              <label class="control-label" for="user_email">Ваша почта</label>
+              <input class="form-control" id="user_email" type="text"/>
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="message">Ваш вопрос</label>
+              <textarea class="form-control" id="message"></textarea>
+            </div>
+            <div class="message"></div>
+          </form>
         </div>
-      </div>
-    </section>
-    <section class="process" id="process">
-      <div class="inner_wrapper about_wrapper">
-        <div class="about_descript">
-          <div class="row">
-            <div class="col-md-6 col-sm-10 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
-              <div class="tittle_block">Ставка на&nbsp;пользу и&nbsp;качество</div>
-              <div class="descript_block">Мы снимаем рекламу, передачи, кино. Рисуем афиши, упаковки, мультфильмы. Придумываем и создаем фирменный стиль. Верстаем журналы, сайты. Визуализируем архитектуру, спецэффекты. Делаем корпоративные презентации.</div>
-            </div>
-          </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" id="submit" type="button">Отправить</button>
         </div>
       </div>
-    </section>
-    <section class="company" id="company">
-      <div class="inner_wrapper about_wrapper">
-        <div class="about_descript">
-          <div class="row">
-            <div class="col-md-6 col-sm-10 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
-              <div class="tittle_block">Нам доверяют</div>
-              <div class="descript_block">Крупные компании Калининграда и области доверяют нам свои проекты. Также мы работаем с другими компаниями России и Европы. </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="portfolio" id="portfolio">
-      <div class="inner_wrapper__port row">
-        <div class="tittle_block nav_tit top_tit"> 
-          <div class="tit">Проекты</div>
-        </div>
-        <div class="nav_wraper"> 
-          <ul class="port_nav">
-            <li class="one nauka"><a class="one_link" href="#nauka"> 
-                <div class="caption_block nav_cap">ТВ-Передача</div>
-                <div class="descript_block nav_block">«Наука за&nbsp;минуту»</div></a></li>
-            <li class="one bond"><a class="one_link" href="#bond"> 
-                <div class="caption_block nav_cap">Реклама</div>
-                <div class="descript_block nav_block">«Джеймс Бонд»</div></a></li>
-            <li class="one vosk"><a class="one_link" href="#vosk"> 
-                <div class="caption_block nav_cap">ТВ-Передача</div>
-                <div class="descript_block nav_block">«Воскресенье»</div></a></li>
-            <li class="one litra"><a class="one_link" href="#litra"> 
-                <div class="caption_block nav_cap">ТВ-Передача</div>
-                <div class="descript_block nav_block">«Живая Литература»</div></a></li>
-            <li class="one fraz"><a class="one_link" href="#fraz"> 
-                <div class="caption_block nav_cap">Проект</div>
-                <div class="descript_block nav_block">«Живая фразеология»</div></a></li>
-          </ul>
-        </div>
-        <section class="outlet_port">
-          <div class="outlet_wrap" id="nauka">
-            <div class="outlet outlet_nauka">
-              <div class="outlet_left col-md-5 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
-                <div class="caption_block">ТВ-Передача</div>
-                <div class="tittle_block_out">«Наука за&nbsp;минуту»</div>
-                <div class="descript_block">Почему мы все в матрице и как не рассыпаться на молекулы? в «Науке за минуту» профессорский состав БФУ им. И. Канта достпуно объяснит все самые загадочные явления нашего мира.</div><a class="btn btn-default" href="../../nauka.html" role="button">Подробней</a>
-              </div>
-              <div class="outlet_right col-md-5 col-sm-10 col-xs-10 col-md-pull-1 col-sm-pull-1 col-xs-pull-1"><img class="outlet_pic" src="../../img/outlet_pic/nauka.jpg"/></div>
-            </div>
-          </div>
-          <div class="outlet_wrap" id="bond">
-            <div class="outlet outlet_bond">
-              <div class="outlet_left col-md-5 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
-                <div class="caption_block">Реклама</div>
-                <div class="tittle_block_out">«Джеймс Бонд»&nbsp;АвтоDepo</div>
-                <div class="descript_block">АвтоDepo – один из крупнейших калининградских автосервисов. Владельцы захотели снять стильное видео, в котором будут показаны основные услуги, предлагаемые компанией.</div><a class="btn btn-default" href="#" role="button">Подробней</a>
-              </div>
-              <div class="outlet_right col-md-5 col-sm-10 col-xs-10 col-md-pull-1 col-sm-pull-1 col-xs-pull-1"><img class="outlet_pic" src="../../img/outlet_pic/bond.jpg"/></div>
-            </div>
-          </div>
-          <div class="outlet_wrap" id="vosk">
-            <div class="outlet outlet_bond">
-              <div class="outlet_left col-md-5 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
-                <div class="caption_block">ТВ-Передача</div>
-                <div class="tittle_block_out vosk_t">«Воскресенье»</div>
-                <div class="descript_block">Передача о Калининграде и калининградцах</div><a class="btn btn-default" href="#" role="button">Подробней</a>
-              </div>
-              <div class="outlet_right col-md-5 col-sm-10 col-xs-10 col-md-pull-1 col-sm-pull-1 col-xs-pull-1"><img class="outlet_pic" src="../../img/outlet_pic/vosk.png"/></div>
-            </div>
-          </div>
-          <div class="outlet_wrap" id="litra">
-            <div class="outlet outlet_bond">
-              <div class="outlet_left col-md-5 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
-                <div class="caption_block">ТВ-Передача</div>
-                <div class="tittle_block_out">«Живая литература»</div>
-                <div class="descript_block">«Живая литература» — серия монологов известного культуролога и филолога Владимира Гильманова, посвященная ключевым произведениям русской литературы.</div><a class="btn btn-default" href="#" role="button">Подробней</a>
-              </div>
-              <div class="outlet_right col-md-5 col-sm-10 col-xs-10 col-md-pull-1 col-sm-pull-1 col-xs-pull-1"><img class="outlet_pic" src="../../img/outlet_pic/litra.jpg"/></div>
-            </div>
-          </div>
-          <div class="outlet_wrap" id="fraz">
-            <div class="outlet outlet_bond">
-              <div class="outlet_left col-md-5 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
-                <div class="caption_block">Мультфильм</div>
-                <div class="tittle_block_out">«Живая фразеология»</div>
-                <div class="descript_block">Проект «Живая фразеология» – это короткие образовательные мультфильмы о русских фразеологизмах (например, как собака на сене или подложить свинью), предназначенные для студентов, изучающих русский язык как иностранный, а также для детей – носителей языка. </div><a class="btn btn-default" href="#" role="button">Подробней</a>
-              </div>
-              <div class="outlet_right col-md-5 col-sm-10 col-xs-10 col-md-pull-1 col-sm-pull-1 col-xs-pull-1"><img class="outlet_pic" src="../../img/outlet_pic/fraz.jpg"/></div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-    <section class="contacts" id="contacts">
-      <div class="inner_wrapper contacts_wrapper row">
-        <div class="left_part_c col-md-3 col-sm-10 col-xs-10">
-          <div class="caption_block">Контакты</div>
-          <div class="descript_block">Заходите к нам в гости в офис в&nbsp;Калининграде на улице Фрунзе, дом&nbsp;6, 6 этаж</div>
-          <div class="descript_block">Либо позвоните по телефону 8&nbsp;(911)&nbsp;123&nbsp;45&nbsp;67</div>
-          <div class="descript_block">Или напишите письмо на адрес mediabfu@gmail.com</div>
-          <div class="descript_block">К нам можно прийти с понедельника по&nbsp;пятницу с 10 утра до 8 вечера</div>
-        </div>
-        <div class="right_part_c col-md-offset-1 col-md-6 col-sm-10 col-xs-10">
-          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.900824506796!2d20.519361951895732!3d54.711367980191014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e3160da33f20c7%3A0x5b3791288d492dcd!2z0YPQuy4g0KTRgNGD0L3Qt9C1LCA2LCDQmtCw0LvQuNC90LjQvdCz0YDQsNC0LCDQmtCw0LvQuNC90LjQvdCz0YDQsNC00YHQutCw0Y8g0L7QsdC7LiwgMjM2MDA2!5e0!3m2!1sru!2sru!4v1516890275692" frameborder="0" style="border:0;" allowfullscreen="allowfullscreen"></iframe>
-        </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="footer_wrapper">
-        <div class="foot_left">
-          <div class="descript_block">Медиацентр БФУ им. И. Канта</div>
-        </div>
-        <div class="foot_right">
-          <div class="descript_block">2018</div>
-        </div>
-      </div>
-    </footer>
-    <nav id="menu">
-      <ul>
-        <li><a href="#hero">Главная</a></li>
-        <li><a href="#about">О студии</a></li>
-        <li><a href="#process">Подход</a></li>
-        <li><a href="#company">Клиенты</a></li>
-        <li><a href="#portfolio">Проекты</a></li>
-        <li><a href="#contacts">Контакты</a></li>
-      </ul>
-    </nav>
+    </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="js/jquery.mmenu.all.js"></script>
-  <script src="js/jquery.mmenu.pagescroll.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/swiper.min.js"></script>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="line"></div>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only"></span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#hero"><img class="logo_img" src="../../img/ico/logo.svg"/>
+          <!----></a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav_item"><a class="nav_link" href="#about">О студии</a></li>
+          <li class="nav_item"><a class="nav_link" href="#process">Подход</a></li>
+          <li class="nav_item"><a class="nav_link" href="#portfolio">Проекты</a></li>
+          <li class="nav_item"><a class="nav_link" href="#contacts">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="hero alig" id="hero">
+    <div class="inner_wrapper row container-fluid">
+      <div class="hero_img col-md-5 col-md-offset-1 col-sm-10 col-xs-10 col-xs-offset-0"><img class="in_img img-fluid" src="../../img/hero_img.svg"/></div>
+      <div class="hero_descript_block col-md-4 col-md-offset-1 col-sm-12 col-xs-offset-0 col-xs-12">
+        <div class="hero_tittle">Место полезных решений</div>
+        <div class="text_descript">Привет, мы — команда Медиацентра, мы создаем и развиваем полезные продукты в&nbsp;цифровой среде</div>
+        <button class="btn btn-default" type="button" data-toggle="modal" data-target="#call">Связаться с нами</button>
+      </div>
+    </div>
+  </section>
+  <section class="about alig" id="about">
+    <div class="in_wrapper row container-fluid mt">
+      <div class="about_desc col-md-5 col-sm-12 col-xs-12">
+        <div class="text_header">Эффективно решаем задачи</div>
+        <div class="text_descript">Мы используем современное и мощное оборудование для создания наших продуктов. В рабочем арсенале есть все необходимое для их реализации. Команда состоит из операторов, монтажеров, дизайнеров, мультипликаторов, художников и специалистов по работе с 3D.</div>
+      </div>
+      <div class="about_pic col-md-offset-1 col-md-4 col-sm-8 col-xs-8"><img class="in_img" src="../../img/about_img.svg"/></div>
+    </div>
+  </section>
+  <section class="about process alig" id="process">
+    <div class="in_wrapper row container-fluid">
+      <div class="about_desc col-md-5 col-sm-12 col-xs-12">
+        <div class="text_header">Мы умеем делать полезные продукты</div>
+        <div class="text_descript">Мы снимаем рекламу, передачи, кино. Рисуем афиши, упаковки, мультфильмы. Придумываем и создаем фирменный стиль. Верстаем журналы, сайты. Визуализируем архитектуру, спецэффекты. Делаем корпоративные презентации.</div>
+        <div class="text_descript">Крупные компании Калининграда и области доверяют нам свои проекты. Также мы работаем с другими компаниями России и Европы.</div>
+      </div>
+      <div class="about_pic col-md-offset-1 col-md-4 col-sm-8 col-xs-8"><img class="in_img" src="../../img/port_img.svg"/></div>
+    </div>
+  </section>
+  <!--include include/company.pug-->
+  <section class="portfolio row alig" id="portfolio">
+    <div class="text_header col-md-10">Проекты</div>
+    <div class="sw_wrap col-md-10 col-sm-10 col-xs-10">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a class="swiper_link" href="nauka.html">
+              <p class="swiper_link__tittle">Наука за минуту</p>
+              <p class="swiper_link__desc">Почему мы все в матрице и как не рассыпаться на молекулы? В «Науке за минуту» профессорский состав БФУ им. И. Канта доступно объяснит все самые загадочные явления нашего мира.</p></a><img class="sw_img" src="../../img/pic/space.jpg"/></div>
+          <div class="swiper-slide"><a class="swiper_link" href="nauka.html">
+              <p class="swiper_link__tittle">Реклама АвтоDepo</p>
+              <p class="swiper_link__desc">АвтоDepo — один из крупнейших калининградских автосервисов. Владельцы захотели снять стильное видео, в котором будут показаны основные услуги, предлагаемые компанией.</p></a><img class="sw_img" src="../../img/pic/bond.jpg"/></div>
+          <div class="swiper-slide"><a class="swiper_link" href="nauka.html">
+              <p class="swiper_link__tittle">Живая фразеология</p>
+              <p class="swiper_link__desc">Проект «Живая фразеология» – это короткие образовательные мультфильмы о русских фразеологизмах (например, как собака на сене или подложить свинью), предназначенные для студентов, изучающих русский язык как иностранный, а также для детей – носителей языка.</p></a><img class="sw_img" src="../../img/pic/fraz.jpg"/></div>
+          <div class="swiper-slide"><a class="swiper_link" href="vosk.html">
+              <p class="swiper_link__tittle">Воскресенье</p>
+              <p class="swiper_link__desc">Передача о Калининграде и калининградцах</p></a><img class="sw_img" src="../../img/pic/wosk.jpg"/></div>
+          <div class="swiper-slide"><a class="swiper_link" href="nauka.html">
+              <p class="swiper_link__tittle">Живая литература</p>
+              <p class="swiper_link__desc">«Живая литература» — серия монологов известного культуролога и филолога Владимира Гильманова, посвященная ключевым произведениям русской литературы.</p></a><img class="sw_img" src="../../img/pic/litra.jpg"/></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+  <section class="contacts alig" id="contacts">
+    <div class="inner_wrapper contacts_wrapper container-fluid row">
+      <div class="left_part_c col-md-3 col-sm-11 col-xs-11">
+        <div class="text_header">Контакты</div>
+        <div class="text_descript">Мы находимся в&nbsp;Калининграде, улица&nbsp;Фрунзе, дом&nbsp;6, 6&nbsp;этаж.</div>
+        <div class="text_descript">Заходите к&nbsp;нам в&nbsp;гости с&nbsp;понедельника по пятницу с&nbsp;10 утра до&nbsp;8 вечера.</div>
+        <div class="text_descript">Либо позвоните по телефону 8&nbsp;(911)&nbsp;123-45-67.</div>
+        <div class="text_descript">Или напишите письмо на&nbsp;адрес mediabfu@gmail.com</div>
+      </div>
+      <div class="right_part_c col-md-offset-1 col-md-6 col-sm-10 col-xs-10">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.900824506796!2d20.519361951895732!3d54.711367980191014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e3160da33f20c7%3A0x5b3791288d492dcd!2z0YPQuy4g0KTRgNGD0L3Qt9C1LCA2LCDQmtCw0LvQuNC90LjQvdCz0YDQsNC0LCDQmtCw0LvQuNC90LjQvdCz0YDQsNC00YHQutCw0Y8g0L7QsdC7LiwgMjM2MDA2!5e0!3m2!1sru!2sru!4v1516890275692" frameborder="0" style="border:0;" allowfullscreen="allowfullscreen"></iframe>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer_wrapper">
+      <div class="foot_left">
+        <div class="descript_block">Медиацентр БФУ им. И. Канта</div>
+      </div>
+      <div class="foot_right">
+        <div class="descript_block">2018</div>
+      </div>
+    </div>
+  </footer>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper.min.js"></script>

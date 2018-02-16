@@ -1,21 +1,28 @@
-body
-	width: 100%
-	height: 100%
-
-
-#my_menu
-	min-height: 100vh
-
-	
-	
+body, html
+  width: 100%
+  height: 100%
+  background-color: #F7F7F7
 .row
-	margin: 0	
-.wrapper
-	width: 100%
-	height: 100%
-	margin: 0 auto
-	
+  margin: 0
+.about_pic,
+.hero_img
+  object-fit: cover
+  display: flex
+  align-items: center
+  justify-content: center
+.in_wrapper.row.container-fluid
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+.in_img
+  height: 100%
+  width: 100%
 
+.wrapper
+  width: 100%
+  height: 100%
+  margin: 0 auto
 
 @import header
 @import hero
@@ -28,6 +35,5 @@ body
 @import naukacase
 @import hamburger
 @import hamburgers
-
 
 @import media
