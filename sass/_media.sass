@@ -1,162 +1,170 @@
 /* Large desktop */
 @media (min-width: 1200px)
-    .left_part
-        margin-bottom: 60px
+  .about
+    height: 100%
+  .swiper-button-prev,
+  .swiper-button-next
+    width: 10px
+    height: 10px
+    padding: 20px
+    background-size: 12px 30px
+    top: 90%
 
-@media (min-width: 979px) and (max-width: 1200px) 
-    .tittle_block 
-        font-size: 60px
-        line-height: 70px
-    .tittle
-        font-size: 60px
-        line-height: 70px
+@media (min-width: 979px) and (max-width: 1200px)
+  .hero_tittle
+    font-size: 48px
+  .text_descript
+    font-size: 20px
+  .text_header
+    font-size: 36px
+  .about
+    height: 100%
+  .swiper-button-prev,
+  .swiper-button-next
+    width: 10px
+    height: 10px
+    padding: 20px
+    background-size: 12px 30px
+    top: 90%
+  .swiper_link
+    padding: 0 1em
+  .swiper_link__tittle
+    font-size: 26px
+    line-height: 1.2em
+  .swiper_link__desc
+    font-size: 18px
+    line-height: 1.2em
 
-    
 /* Portrait tablet to landscape and desktop */
 
 @media (min-width: 768px) and (max-width: 991px)
-    .tittle_block 
-        font-size: 50px
-        line-height: 60px
-    .tittle
-        font-size: 50px
-        line-height: 60px
-    .nav.navbar-nav
-	    margin-left: 0px
-    .navbar-collapse.collapse
-        padding: 0
-        margin-left: 10px
-    .left_part
-        margin: 0 200px 24px 60px
-    .nav_wrap
-        padding: 2em 0em 7em 5em
-    .outlet_pic
-        display: none
-    .inner_wrapper.contacts_wrapper.row
-	    display: flex
-	    flex-direction: column
-	    justify-content: center
-	    align-items: center
-	    height: 100%
-	    width: 100vw
-        padding: 0 3em
-    .footer_wrapper
-        padding: 3em 1.5em
-    .tittle_block_out
-        font-size: 40px
-        font-weight: 600
-        line-height: 46px
-        letter-spacing: 0
-        margin-bottom: 30px
-        word-wrap: break-word
-    .nav_cap
-        display: none
-    .descript_block.nav_block
-        padding-top: 10px
-    .tittle_text
-        position: absolute
-        top: 2em
-        left: 3em
-        align-self: flex-start
-        z-index: 2
-    
-    
+  .hero_tittle
+    font-size: 32px
+  .text_descript
+    font-size: 20px
+  .text_header
+    font-size: 28px
+  .process
+    padding: 9em 0 7em 0
+  .in_wrapper.row.container-fluid.mt
+    margin-top: 8em
+  .swiper_link
+    padding: 0 1em
+  .swiper-button-prev,
+  .swiper-button-next
+    width: 10px
+    height: 10px
+    padding: 20px
+    background-size: 12px 30px
+    top: 90%
+  .portfolio
+    padding: 0
+    background-color: #F7F7F7
+  .swiper_link__tittle
+    font-size: 24px
+    line-height: 1.2em
+  .swiper_link__desc
+    font-size: 16px
+    line-height: 1.2em
+
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px)
-    .tittle_block 
-        font-size: 40px
-        line-height: 50px
-    .tittle
-        font-size: 40px
-        line-height: 50px
-    .tittle_descript
-        font-size: 20px
-        line-height: 26px
-    .nav
-	    display: flex
-	    align-items: stretch
-	    justify-content: space-between
-	    flex-direction: column
-    .nav.navbar-nav
-	    margin-left: 15px
-    .tittle_block
-        font-size: 40px
-        line-height: 44px
-    .descript_block
-        font-size: 18px
-        line-height: 20px
-    .nav_wrap
-        padding: 0
-    .left_part
-        margin: 0 30px 10px 10px
-    .outlet_pic
-        display: none
-    .inner_wrapper.contacts_wrapper.row
-	    display: flex
-	    flex-direction: column
-	    justify-content: center
-	    align-items: center
-	    height: 100%
-	    width: 100vw
-        padding: 0 3em
-    .footer_wrapper
-        padding: 3em 1em
-    .tittle_block_out
-        font-size: 35px
-        font-weight: 600
-        line-height: 38px
-        letter-spacing: 0
-        margin-bottom: 30px
-        word-wrap: break-word
-    .nav_cap
-        display: none
-    .descript_block.nav_block
-        padding-top: 10px
-    .one_link
-        padding-left: 5px
-    .tit
-        font-size: 24px
-    .tittle_text
-        position: absolute
-        top: 2em
-        left: 2em
-        align-self: flex-start
-        z-index: 2
+  .hero_tittle
+    font-size: 28px
+  .text_descript
+    font-size: 18px
+  .inner_wrapper,
+  .about,
+  .portfolio,
+  .process,
+  .company
+    flex-direction: column
+  .text_header
+    font-size: 20px
+  .swiper_link
+    padding: 0 1em
+  .inner_wrapper, .about, .portfolio, .process, .company
+    //flex-direction: column-reverse
+  .swiper-button-prev,
+  .swiper-button-next
+    width: 10px
+    height: 10px
+    padding: 20px
+    background-size: 12px 30px
+    top: 90%
+  .portfolio
+    padding: 0
+    flex-direction: column
+  .contacts
+    height: initial
+  .inner_wrapper.contacts_wrapper.row
+    height: 100%
+  .inner_wrapper
+    padding-top: 70px
+  .text_header.col-md-10
+    padding-top: 50px
+
 /* Landscape phones and down */
 @media (max-width: 480px)
-    .tittle_block 
-        font-size: 30px
-        line-height: 33px
-    .tittle
-        font-size: 40px
-        line-height: 40px
-    .tittle_descript
-        font-size: 16px
-        line-height: 20px
-    .menu_link
-	    font-size: 12px
-        letter-spacing: 1px
-    .left_part
-        margin: 0 30px 50px 10px
-    .outlet_pic
-        display: none
-    .tittle_block_out
-        font-size: 24px
-        font-weight: 600
-        line-height: 46px
-        letter-spacing: 0
-        margin-bottom: 26px
-        word-wrap: break-word
-    .nav_cap
-        display: none
-    .descript_block.nav_block
-        font-size: 10px
-        line-height: 12px
-        font-weight: 500
-        padding-top: 10px
-    .outlet
-        padding: 0
-    .one_link
-        padding-left: 5px
-        &:hover
-            padding: 50rem 5px 0 5px
+
+
+  .hero_descript_block
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+  .hero_tittle
+    font-size: 24px
+    margin-bottom: 16px
+  .text_descript
+    font-size: 14px
+    margin-bottom: 16px
+  .text_header
+    font-size: 20px
+  .btn.btn-default
+    margin-top: 8px
+    margin-bottom: 0
+  .in_wrapper.row.container-fluid
+    flex-direction: column
+  //sections
+  .about
+    padding: 0
+    margin-bottom: 0
+  .company
+    padding: 0
+  .inner_wrapper
+    padding-top: 0
+  .hero
+    padding-top: 0
+    margin-bottom: 0em
+  .text_header.col-md-10
+    padding-top: 0
+    padding-bottom: 2em
+  .swiper-container
+    margin-top: 0
+  .process
+    padding: 0
+    background: #F7F7F7
+  .swiper-button-prev,
+  .swiper-button-next
+    width: 10px
+    height: 10px
+    padding: 20px
+    background-size: 12px 30px
+    top: 90%
+  .swiper_link
+    padding: 0 1em
+  .swiper_link__tittle
+    font-size: 22px
+  .swiper_link__desc
+    font-size: 14px
+  .contacts
+    height: initial
+  .alig
+    border-bottom: 1px solid rgba($black, .1)
+    padding: 80px 0 80px 0
+  .inner_wrapper.contacts_wrapper.row
+    flex-direction: column
+  .right_part_c
+    margin-bottom: 0

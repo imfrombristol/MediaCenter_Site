@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 html(lang="en")
 head
-	meta(charset="UTF-8")
-	meta(name="viewport" content="width=device-width, initial-scale=1.0")
-	title Медиацентр 
-	link(rel="stylesheet" href="css/normalize.css")
-	link(rel="stylesheet" href="css/bootstrap.min.css")
-	link(rel="stylesheet" href="css/main.css")
-	link(rel="stylesheet" href="css/swiper.min.css")
-	link(rel="stylesheet" href="css/jquery.mmenu.all.css")
-	link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,400,500,600")
-	
-	
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Медиацентр
+    link(rel="stylesheet" href="css/normalize.css")
+    link(rel="stylesheet" href="css/bootstrap.min.css")
+    link(rel="stylesheet" href="css/swiper.min.css")
+    link(rel="stylesheet" href="css/main.css")
+
+
 body
-	.wrapper#mymenu
-		include include/header.pug
-		include include/hero.pug
-		include include/about.pug
-		include include/process.pug
-		include include/company.pug
-		include include/portfolio.pug
-		include include/contacts.pug
-		include include/footer.pug
-		nav#menu
-			ul
-				li
-					a(href="#hero") Главная
-				li
-					a(href="#about") О студии
-				li
-					a(href="#process") Подход
-				li
-					a(href="#company") Клиенты
-				li
-					a(href="#portfolio") Проекты
-				li
-					a(href="#contacts") Контакты
-	script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
-	script(src="js/jquery.mmenu.all.js")
-	script(src="js/jquery.mmenu.pagescroll.js")
-	script(src="js/main.js")
-	script(src="js/bootstrap.min.js")
-	script(src="js/swiper.min.js")
+    .modal.fade#call(tabindex="-1", role="dialog", aria-labelledby="myModalLabel")
+        .modal-dialog(role="document")
+            .modal-content
+                .modal-header
+                    button.close(type="button", data-dismiss="modal", aria-label="Close")
+                        span(aria-hidden="true") &times;
+                .modal-body
+                    form
+                        .form-group
+                            label.control-label(for="user_name") Ваше Имя
+                            input.form-control#user_name(type="text")
+                        .form-group
+                            label.control-label(for="user_email") Ваша почта
+                            input.form-control#user_email(type="text")
+                        .form-group
+                            label.control-label(for="message") Ваш вопрос
+                            textarea.form-control#message
+                        .message
+                .modal-footer
+                    button.btn.btn-default#submit(type="button", ) Отправить
+    include include/header.pug
+    include include/hero.pug
+    include include/about.pug
+    include include/process.pug
+    //include include/company.pug
+    include include/portfolio.pug
+    include include/contacts.pug
+    include include/footer.pug
+
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+script(src="js/main.js")
+script(src="js/bootstrap.min.js")
+script(src="js/swiper.min.js")
